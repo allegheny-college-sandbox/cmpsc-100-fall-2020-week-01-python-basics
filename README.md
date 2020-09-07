@@ -24,7 +24,6 @@ For those who just want to get to work, consult the `Instructional Materials` se
 * [Overview](#Overview)
   * [Evaluation](#Evaluation)
 * [Instructional materials](#Instructional-materials)
-  * [Media](#Media)
   * [Worksheets and activities](#Worksheets-and-activities)
   * [Lab](#Lab)
 * [Python basics](#Python-basics)
@@ -42,7 +41,7 @@ For those who just want to get to work, consult the `Instructional Materials` se
 
 ---
 
-- [ ] Log into the `#labs` channel in our class [Slack](https://cmpsc-100-02-sp-2020.slack.com)
+- [ ] Log into the `#assignments` channel in our class [Slack](https://cmpsc-100-00-fa-2020.slack.com)
 - [ ] Click the link provided for the lab assignment and accept it in GitHub classroom
 - [ ] Once the assignment finishes building, click the link to go to your personal repository assignment
 
@@ -58,13 +57,12 @@ For those who just want to get to work, consult the `Instructional Materials` se
 #### Cloning
 
 * [ ] Type `ls` in your terminal window
-* You should be in your `CMPSC100` directory
-- [ ] Change directories (`cd`) to your `Labs` folder
-- [ ] Once in the labs folder, "clone" the repository using the link copied above
+* You should be in your `~` directory
+- [ ] Once there, "clone" the repository using the link copied above
 * If I (the instructor) were to clone my own repository, I'd enter (your link will look different):
 
 ```
-git clone git@github.com:allegheny-college-cmpsc-100-spring-2020/cmpsc-100-spring-2020-lab-04-dluman
+git clone git@github.com:allegheny-college-cmpsc-100-fall-2020/cmpsc-100-fall-2020-week-01-python-basics-dluman
 ```
 
 ## Overview
@@ -175,8 +173,70 @@ In the following set of worksheets, we explore statements and the various ways t
 
 * [G. Wiz and the lousy lottery](lab/Week%2001%20-%20Lab%20-%20The%20Lousy%20Lottery.ipynb)
 
-# Wrap-up
+## Wrap-up
 
-## GatorGrader
+---
 
-## Submitting your work
+### GatorGrader
+
+GatorGrader is an Allegheny College-developed, student-written and maintained application that grades your work for you. The long and short of it, before and when you turn in your assignments, you can know what your approximate grade will be.
+
+(It doesn't do _everything_ for us, but it gives us a good starting point for evaluating your work.)
+
+You don't need to do anything to get it -- I will distribute all the files you need with every repository. You realize the following benefits:
+
+* Complete grading transparency
+* Grading criteria _never_ changes
+* The criteria is very specific; you will know what changes you need to make
+
+This application runs in your terminal tab, and can grade:
+
+* The whole repository
+* Just worksheets
+* Just the lab
+
+## Checking your work
+
+---
+
+No matter where you are in your repository, the command to start and run GatorGrader is always the same:
+
+```
+gradle grade
+```
+
+However, you need to be _in the right place_ to get the right result. The following table summarizes the various grading locations.
+
+| Location | Grading             |
+|----------|---------------------|
+| Root folder | Repository requirements |
+| `worksheets/` | Worksheet requirements |
+| `lab/`        | Lab requirements |
+
+### Submitting the assignment/saving progress
+
+The GitHub platform is a place to store your work. So, it makes some sense that should be able to _clone_ (download) from it, and push back (upload) to it. Here, we'll learn this second part.
+
+- [ ] `cd` to your `~` folder
+- [ ] Locate the `cmpsc-100-fall-2020-week-01-python-basiscs` folder and `cd` to it.
+
+Once in this folder, we need to tell git that there have been changes.
+
+- [ ] Type `git add .` and press `Enter`
+* This tells git to look through the _entire_ folder structure for new changes and "stage" them
+
+- [ ] Type `git commit -m "{Commit message}"` to "label" the commit
+* This is typically something like `git commit -m "Fixing a typo"` -- the message in quotes should be as descriptive as possible, while still remaining somewhat short
+
+- [ ] To send all changes to the server, type `git push`
+- [ ] At the prompt, input the password associated with the `SSH Key` you created earlier in this exercise (yesterday)
+
+Once the process finishes successfully, we're done!
+
+#### A strong warning
+
+<div class="alert alert-block alert-danger">
+    <p><strong>While we may use this server to store code, <u>you</u> are responsible for using GitHub as your main backup.</strong></p>
+    <p>While I back this server up on a regular basis, I cannot guarantee that I'll have the ability to restore up-to-the-minute data for your work.</p>
+    <p>Remember: to err is human; to back up your work is divine.</p>
+</div>
